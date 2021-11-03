@@ -16,7 +16,7 @@ FROM ubuntu:21.04
      add-apt-repository ppa:savoury1/blender && \
      add-apt-repository ppa:savoury1/ffmpeg4
  RUN apt-get update && \
-     apt-get install -y blender ffmpeg git git-lfs  
+     apt-get install -y blender ffmpeg git git-lfs nvidia_cuda_toolkit  
  RUN curl -SL "https://downloads.sourceforge.net/project/virtualgl/${VIRTUALGL_DIR}/virtualgl_${VIRTUALGL_VERSION}_amd64.deb" -o virtualgl_${VIRTUALGL_VERSION}_amd64.deb && \
      ls -lhrt virtualgl_${VIRTUALGL_VERSION}_amd64.deb  && \
      apt install -y ./virtualgl_${VIRTUALGL_VERSION}_amd64.deb && \
